@@ -1,3 +1,5 @@
+# Note
+
 # SETUP
 
 TEST
@@ -14,3 +16,33 @@ ERROR
 
 GREEN
 Passed this.text as an attribute equal to the test parameter
+
+
+TEST
+Asserting that getText function could retrieve the attribute
+
+ERROR
+(getText not a function)
+
+RED
+Made getText function
+
+ERROR
+(does not match text)
+
+GREEN
+Made getText return text
+
+
+# Note List
+
+SETUP
+
+TEST
+Asserting that noteList is an instance of the NoteList object
+
+ERROR
+(NoteList is not defined)
+
+GREEN
+Defined NoteList
