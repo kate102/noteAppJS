@@ -9,7 +9,6 @@
       console.log("testNoteTakesTextOnInstantiation: Clear")
     }
   };
-
   testNoteTakesTextOnInstantiation();
 })(this);
 
@@ -24,6 +23,5 @@
       console.log("testReturnNoteText: Clear")
     }
   };
-
   testReturnNoteText();
 })(this);

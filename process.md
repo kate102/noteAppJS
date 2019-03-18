@@ -46,3 +46,13 @@ ERROR
 
 GREEN
 Defined NoteList
+
+TEST
+Asserting new NoteList is instantiated with an empty array for notes.
+
+ERROR
+testNoteListIsInstantiatedWithArray does not match
+    at testNoteListIsInstantiatedWithArray
+
+GREEN
+Instantiated NoteList with an empty array

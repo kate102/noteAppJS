@@ -9,21 +9,20 @@
       throw new Error("testNoteListCanbeInstantiated Error: Not an instance of object")
     }
   };
-
   testNoteListCanbeInstantiated();
 })(this);
 
-// (function(exports) {
-//   function testReturnNoteText() {
-//     var note = new Note("It is a test note, stupid");
-//
-//     if (note.getText() !== "It is a test note, stupid") {
-//       throw new Error("Error: testReturnNoteText does not match");
-//     }
-//     else {
-//       console.log("testReturnNoteText: Clear")
-//     }
-//   };
-//
-//   testReturnNoteText();
-// })(this);
+(function(exports) {
+  function testNoteListIsInstantiatedWithArray() {
+    var noteList = new NoteList();
+
+    if (noteList.notesArray.length !== 0) {
+      console.log(noteList.notesArray)
+      throw new Error("Error: testNoteListIsInstantiatedWithArray does not match");
+    }
+    else {
+      console.log("testNoteListIsInstantiatedWithArray: Clear")
+    }
+  };
+  testNoteListIsInstantiatedWithArray();
+})(this);
