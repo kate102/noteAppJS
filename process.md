@@ -56,3 +56,22 @@ testNoteListIsInstantiatedWithArray does not match
 
 GREEN
 Instantiated NoteList with an empty array
+
+
+TEST
+Expecting that printAll returns the array
+
+ERROR
+(printAll is not defined)
+
+RED
+Defined printAll
+
+ERROR
+(Does not match expected result)
+
+GREEN
+Changed test to expect printAll to return all entries in the array
+
+
+TEST

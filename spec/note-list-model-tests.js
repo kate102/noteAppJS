@@ -26,3 +26,21 @@
   };
   testNoteListIsInstantiatedWithArray();
 })(this);
+
+
+(function(exports) {
+  function testNoteListCanPrint() {
+    var noteList = new NoteList();
+    noteList.notesArray.push('Note Hello!')
+    noteList.notesArray.push('Note Goodbye!')
+
+    if (noteList.printAll().includes("Note Hello!", "Note Goodbye!")){
+      console.log("testNoteListCanPrint: Clear")
+    }
+    else {
+      console.log(noteList.printAll())
+      throw new Error("Error: testNoteListCanPrint does not match");
+    }
+  };
+  testNoteListCanPrint();
+})(this);
