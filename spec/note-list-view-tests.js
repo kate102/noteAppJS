@@ -11,3 +11,18 @@
   };
   testNoteListViewCanbeInstantiated();
 })(this);
+
+(function(exports) {
+  function testNoteListViewTakesNoteList() {
+    var noteList = new NoteList()
+    var noteListView = new NoteListView(noteList);
+
+    if (noteListView.noteList === noteList) {
+      console.log("Clear: testNoteListViewTakesNoteList");
+    }
+    else {
+      throw new Error("Error: testNoteListViewTakesNoteList")
+    }
+  };
+  testNoteListViewTakesNoteList();
+})(this);
