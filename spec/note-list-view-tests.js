@@ -37,7 +37,6 @@
     noteList.addNote(note2)
     var noteListView = new NoteListView(noteList);
     var htmlStr = "<ul><li><div>First Note</div></li><li><div>Second Note</div></li></ul>"
-    console.log(noteListView.showHTML());
     if (noteListView.showHTML() === htmlStr) {
       console.log("Clear: testNoteListViewGetsHTML");
     }
