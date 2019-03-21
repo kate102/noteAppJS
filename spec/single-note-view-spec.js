@@ -8,11 +8,11 @@
   function SingleNoteViewTest() {
     // create double of noteList called "noteListDouble"
     function noteDouble() {
-      this.text = "Favourite drink: seltzer"
+      this.text = "Favourite drink: Merlot"
     }
 
     var noteDouble = new noteDouble()
-    var testStr = "<div>Favourite drink: seltzer</div>"
+    var testStr = "<div>Favourite drink: Merlot</div>"
     var singleNoteView = new SingleNoteView(noteDouble)
 
     assertionToCheck = (singleNoteView.returnHTML() === testStr)

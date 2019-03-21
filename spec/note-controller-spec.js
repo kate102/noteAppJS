@@ -1,25 +1,20 @@
 (function(exports) {
 
   function HTMLContainsDefaultNote() {
-
     // create double of noteList called "noteListDouble"
     function noteDouble() {
-      this.text = "Favourite drink: seltzer"
+      this.text = "Favourite food: pesto"
     }
-
     var noteDouble = new noteDouble()
 
     function noteListDouble() {
       this.notesArray = [noteDouble]
     }
-    noteListDouble.prototype = {
-      addNote: function(note) {
-        this.notesArray.push(note);
-      }
-    }
     var noteListDouble = new noteListDouble()
     var noteController = new NoteController(noteListDouble)
-    assertionToCheck = (noteController.noteListView.showHTML() === "<ul><li><div>Favourite drink: seltzer</div></li></ul>")
+    var testStr = "<ul><li><div>Favourite food: pesto</div></li></ul>"
+    noteController.getAndInsertHTML()
+    assertionToCheck = (document.getElementById("app").innerHTML === testStr)
     assert.isTrue(assertionToCheck)
   }
 

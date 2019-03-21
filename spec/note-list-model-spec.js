@@ -1,16 +1,19 @@
 (function(exports) {
   function testNoteListCanbeInstantiated() {
     var noteList = new NoteList();
-
+    assertionToCheck = (noteList instanceof NoteList)
+    // if (noteList instanceof NoteList) {
     if (noteList instanceof NoteList) {
-      console.log("testNoteListCanbeInstantiated: Yep, that's an instance!");
+      console.log("Pass: testNoteListCanbeInstantiated - Yep, that's an instance!");
     }
     else {
-      throw new Error("testNoteListCanbeInstantiated Error: Not an instance of object")
+      throw new Error("Fail: testNoteListCanbeInstantiated - Not an instance of object")
     }
   };
   testNoteListCanbeInstantiated();
 })(this);
+// assertionToCheck = (noteController.getAndInsertHTML() === testStr)
+// assert.isTrue(assertionToCheck)
 
 (function(exports) {
   function testNoteListIsInstantiatedWithArray() {
