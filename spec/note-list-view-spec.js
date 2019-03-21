@@ -46,3 +46,22 @@
   };
   testNoteListViewGetsHTML();
 })(this);
+
+(function(exports) {
+  function testOnlyDisplayFirst20CharsOfNote() {
+    var note = new Note("This is my lovely long note")
+    var noteList = new NoteList()
+    noteList.addNote(note)
+    var noteListView = new NoteListView(noteList);
+
+    var htmlStr = "<ul><li><div>This is my lovely lo</div></li></ul>"
+
+    if (noteListView.showHTML() === htmlStr) {
+      console.log("Pass: testOnlyDisplayFirst20CharsOfNote");
+    }
+    else {
+      throw new Error("Error: testOnlyDisplayFirst20CharsOfNote")
+    }
+  };
+  testOnlyDisplayFirst20CharsOfNote();
+})(this);
