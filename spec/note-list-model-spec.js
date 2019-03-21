@@ -30,7 +30,6 @@
   testNoteListIsInstantiatedWithArray();
 })(this);
 
-
 (function(exports) {
   function testNoteListCanPrint() {
     var noteList = new NoteList();
@@ -38,7 +37,7 @@
     noteList.notesArray.push('Note Goodbye!')
 
     if (noteList.printAll().includes("Note Hello!", "Note Goodbye!")){
-      console.log("testNoteListCanPrint: Clear")
+      console.log("Pass: " + arguments.callee.name.toString())
     }
     else {
       console.log(noteList.printAll())
@@ -46,4 +45,23 @@
     }
   };
   testNoteListCanPrint();
+})(this);
+
+(function(exports) {
+  function testNoteListNoteIdsAreUnique() {
+    var noteList = new NoteList();
+    noteList.notesArray.push(new Note('Note Hello!'))
+    noteList.notesArray.push(new Note('Note Goodbye!'))
+
+    var firstId = noteList.notesArray[0].getId()
+    var secondId = noteList.notesArray[1].getId()
+
+    if (firstId !== secondId){
+      console.log("Pass: " + arguments.callee.name.toString())
+    }
+    else {
+      throw new Error(`Error: ${arguments.callee.name.toString()} does not match`);
+    }
+  };
+  testNoteListNoteIdsAreUnique();
 })(this);
